@@ -91,7 +91,7 @@ export default class App extends Component {
 
   operation = (operation) => {
     this.inputs.push(this.state.display);
-    if (!this.operationType && this.inputs.length === 2) {
+    if (this.operationType && this.inputs.length === 2) {
       this.calculate();
     }
     this.operationType = operation;
