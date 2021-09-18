@@ -37,42 +37,6 @@ export default class App extends Component {
   };
 
   getDigit = (d) => {
-<<<<<<< HEAD
-    let str_res;
-
-    if (!this.state.new_input_active) {
-      console.log("if....");
-
-      // setting the first number
-      str_res = this.state.numbers[0]; //using existing number to concatenate
-
-      let new_str_res = str_res + d;
-      if (new_str_res.charAt(0) == "0") {
-        new_str_res = new_str_res.slice(1);
-      }
-      console.log("new_str_res");
-      console.log(new_str_res);
-      this.setState({ numbers: [new_str_res] });
-    } else {
-      console.log("else....");
-      if (this.state.jumped) {
-        str_res = this.state.numbers[0];
-      } else {
-        str_res = "0";
-      }
-      let new_str_res = str_res + d;
-      if (new_str_res.charAt(0) == "0") {
-        new_str_res = new_str_res.slice(1);
-      }
-      console.log("new_str_res");
-      console.log(new_str_res);
-      console.log("this.state.numbers[0]");
-      console.log(this.state.numbers[0]);
-      this.setState({
-        jumped: true,
-        numbers: [new_str_res, this.state.numbers[0]],
-      });
-=======
     let combined_display;
 
     if (this.state.display.includes("Enter 2nd input for")) {
@@ -90,7 +54,6 @@ export default class App extends Component {
 
     if (combined_display.charAt(0) === "0" && combined_display.length > 1) {
       combined_display = combined_display.slice(1);
->>>>>>> 4states
     }
     this.setState({ display: combined_display });
   };
@@ -109,11 +72,6 @@ export default class App extends Component {
     let percented = screenumber / 100;
 
     this.setState({ display: percented.toString() });
-    // this.inputs[0] = Number(this.state.display);
-    // this.inputs[1] = 100;
-    // this.operationType = "divide";
-    // this.setState({ operation: "divide" });
-    // this.calculate();
   };
 
   equal = () => {
