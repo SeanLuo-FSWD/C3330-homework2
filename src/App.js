@@ -79,7 +79,13 @@ export default class App extends Component {
       combined_display = d;
     } else {
       let display = this.state.display;
-      combined_display = display + d;
+      if (this.state.display.includes(".") && d === ".") {
+        // no action for "." if already decimal
+
+        combined_display = display;
+      } else {
+        combined_display = display + d;
+      }
     }
 
     if (combined_display.charAt(0) === "0" && combined_display.length > 1) {
@@ -113,7 +119,7 @@ export default class App extends Component {
   equal = () => {
     this.inputs.push(this.state.display);
     this.calculate();
-
+    this.inputs = [];
     this.setState({ operation: null, display: "0" });
   };
 
