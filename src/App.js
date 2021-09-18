@@ -42,17 +42,20 @@ export default class App extends Component {
     let str_res;
 
     if (!this.state.new_input_active) {
+      console.log("if....");
+
       // setting the first number
       str_res = this.state.numbers[0]; //using existing number to concatenate
 
       let new_str_res = str_res + d;
-      console.log("new_str_res.charAt(0)");
-      console.log(new_str_res.charAt(0));
       if (new_str_res.charAt(0) == "0") {
         new_str_res = new_str_res.slice(1);
       }
+      console.log("new_str_res");
+      console.log(new_str_res);
       this.setState({ numbers: [new_str_res] });
     } else {
+      console.log("else....");
       if (this.state.jumped) {
         str_res = this.state.numbers[0];
       } else {
@@ -62,6 +65,10 @@ export default class App extends Component {
       if (new_str_res.charAt(0) == "0") {
         new_str_res = new_str_res.slice(1);
       }
+      console.log("new_str_res");
+      console.log(new_str_res);
+      console.log("this.state.numbers[0]");
+      console.log(this.state.numbers[0]);
       this.setState({
         jumped: true,
         numbers: [new_str_res, this.state.numbers[0]],
