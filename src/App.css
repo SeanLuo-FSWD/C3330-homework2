@@ -1,6 +1,7 @@
 .App {
   display: grid;
   grid-template-areas:
+    "display display display display"
     "result result result result"
     "ac polarity percent divide"
     "seven eight nine multi"
@@ -16,11 +17,18 @@
   border: solid thin;
 }
 
+.display {
+  grid-area: display;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
 .result {
   grid-area: result;
   background-color: lightgreen;
   font-size: 1.2em;
   font-weight: bold;
+  grid-area: result;
 }
 
 .ac {
