@@ -1,4 +1,4 @@
-This calculator app mimicks the behavior of the calculator app on Mac. It works as follow:
+This calculator app mimics the behaviour of the calculator app on Mac. It works as follow:
 
 1. Enter a number
 2. Select an operation 
